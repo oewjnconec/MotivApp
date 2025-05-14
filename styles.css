@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #FFB400, #F97316);
+}
+
+.widget {
+    font-family: poppins, sans-serif;  
+    margin: 16px;
+    padding: 60px 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    width: 96%;
+    background-color: #ffffff7d;
+}
+
+.time-container{
+    padding-bottom: 20px;
+}
+
+.container {
+    width: 60%;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+  
+
+
+button {
+    background-color: #121bd7; 
+    color: white;
+    border-radius: 40px;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #121cd7ba;
+    border-radius: 5px;
+}
+
+/* RELOJ */
+.time-part, .colon {
+    transition: all 0.3s ease; /* Suaviza cambios */
+}
+
+#time{
+    font-size:50px ;
+}
+
+.colon {
+    opacity: 1; /* Valor inicial */
+  }
+/* RELOJ */
+
+
+
+#quote, #author {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+#quote.show, #author.show {
+    opacity: 1;
+}
+
+
+
+@media (max-width: 600px) {
+    .widget{
+        flex-wrap: wrap;
+    }
+    .container {
+        width: 70%;
+        margin: 0;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        padding: 0%;
+    }
+    #quote  {
+        align-self: flex-start;
+      font-size: 1.2rem;
+    }
+    #author {
+    align-self: flex-start;
+      font-size: 1rem;
+
+    }
+    button {
+      font-size: 0.5rem;
+    }
+
+
+  }
